@@ -1,9 +1,28 @@
-function greeter(person: String) {
-    return "Hello, " + person;
+class Batch{
+
 }
 
-let user = "Jane User";
+class Process{
 
-document.body.textContent = greeter(user);
+        private developer:string;
+        private value1:number;
+        private value2:number;
+        private operator: string;
+        private result: number;
+        private estimatedTime: number;
+        private elapsedTime: number;
+        private status: string;
 
-alert("hey");
+    constructor(){
+        this.developer = "Generic Name";
+        this.value1= 0;
+        this.value2 = 0;
+        this.operator = "+";
+        this.result = 0;
+        this.estimatedTime = 1;
+        this.elapsedTime = 0;
+        this.status = "Queue";
+    }
+}
+
+const process1 = new Process();
