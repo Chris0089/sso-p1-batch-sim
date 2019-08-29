@@ -1,3 +1,5 @@
+const initialStatus = "Queue";
+
 class Batch{
 
 }
@@ -13,16 +15,38 @@ class Process{
         private elapsedTime: number;
         private status: string;
 
-    constructor(){
-        this.developer = "Generic Name";
-        this.value1= 0;
-        this.value2 = 0;
-        this.operator = "+";
+    constructor(
+        devName:string, 
+        firstVal:number, 
+        secondVal: number, 
+        operator:string,
+        timeOfProcess: number,
+        ){
+        this.developer = devName;
+        this.value1 = firstVal;
+        this.value2 = secondVal;
+        this.operator = operator;
+        this.estimatedTime = timeOfProcess;
+        this.status = initialStatus;
         this.result = 0;
-        this.estimatedTime = 1;
+        this.resolveOp();
         this.elapsedTime = 0;
-        this.status = "Queue";
+    }
+    resolveOp(){
+        if (this.operator == "+"){
+            this.result = this.value1 + this.value2;
+        }else if(this.operator == "-"){
+            this.result = this.value1 - this.value2;
+        }else if(this.operator == "*"){
+            this.result = this.value1 * this.value2;
+        }else if(this.operator == "/"){
+            this.result = this.value1 / this.value2;
+        }else if(this.operator == "^"){
+            this.result = this.value1 ^ this.value2;
+        }else if(this.operator == "%"){
+            this.result = this.value1 % this.value2;
+        }
     }
 }
 
-const process1 = new Process();
+//const process1 = new Process();
