@@ -1,0 +1,21 @@
+body{
+    background: #ECECEC !important;
+}
+.divleft{
+    border-width: 0 1px 0 0;
+    border-color:#ECECEC;
+    border-style: solid;
+}
+.divdown{
+    border-width: 0 0 1px 0;
+    border-color:#ECECEC;
+    border-style: solid;
+    text-align: center;
+}
+.batchtitle{
+    font-size:18px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.buttonmargin
